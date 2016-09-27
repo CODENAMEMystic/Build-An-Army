@@ -1,0 +1,55 @@
+import ui
+import console
+
+#ACTION DEFINITIONS
+def army_tapped(sender):
+	console.alert('Location','Select your starting location','Plains','Mountains', 'Other','true')
+def work_tapped(sender):
+	print('worked')
+def raid_tapped(sender):
+	print('X raided X')
+def info_tapped(sender):
+	print('Info about your army')
+	
+#UI DEFINITIONS
+#Storyboard
+storyText = ui.Label()
+storyText.text='thte'
+storyText.width=100
+storyText.height=50
+storyText.x=500
+#Army Button
+army = ui.Button(title='Army')
+army.action = army_tapped
+army.x=28
+army.y=600
+army.width=200
+army.height=50
+#Work
+work = ui.Button(title='Work')
+work.action = work_tapped
+work.x=284
+work.y=600
+work.width=200
+work.height=50
+#Info
+info = ui.Button(title='Info')
+info.action = info_tapped
+info.x=540
+info.y=600
+info.width=200
+info.height=50
+#Raid
+raid = ui.Button(title='Raid')
+raid.action = raid_tapped
+raid.x=796
+raid.y=600
+raid.width=200
+raid.height=50
+
+#INITIALIZE UI
+vp = ui.View(background_color='white')
+vp.add_subview(army)
+vp.add_subview(work)
+vp.add_subview(raid)
+vp.add_subview(info)
